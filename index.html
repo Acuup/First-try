@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профессиональные услуги гадалки</title>
+    <style>
+        /* Сброс стилей и базовые настройки */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Главный баннер */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Секции */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: #2c3e50;
+        }
+
+        /* Услуги */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        /* О нас */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        /* Контакты */
+        .contacts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-block {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-block h3 {
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .contact-item {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: #e9ecef;
+        }
+
+        .contact-item strong {
+            color: #2c3e50;
+            min-width: 120px;
+        }
+
+        .contact-item div {
+            flex: 1;
+        }
+
+        /* Футер */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .contacts-container {
+                gap: 1.5rem;
+            }
+
+            .contact-block {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .contact-item strong {
+                min-width: auto;
+            }
+        }
+
+        /* Анимации */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Профессиональные услуги колдуньи</h1>
+            <p>Помогаем понять и если есть избавится  от магических проблем</p>
+            <a href="#contact" class="cta-button">Связаться с нами</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section">
+        <h2 class="section-title">Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon"></div>
+                <h3>Снятие порчи</h3>
+                <p>Снимем порчу любой сложности</p>
+                <p class="price">от 50 Br</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"></div>
+                <h3>Снимаем сглазы</h3>
+                <p>Снимаем сглазы с детей любого возраста</p>
+                <p class="price">от 60 Br</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon"></div>
+                <h3>Консультируем</h3>
+                <p>Проводим часовую консультацию за время которой обсудим все ваши проблемы</p>
+                <p class="price">от 50 Br</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section">
+        <h2 class="section-title">О нас</h2>
+        <div class="about-content">
+            <p>Работаем больше 20 лет в этой сфере</p>
+            <p>За годы работы мы помогли десяткам людей.</p>
+            <p>Наш подход сочетает в себе как инновационные методы, так и методы передающиеся из поколения в поколение</p>
+        </div>
+    </section>
+    <!-- Контакты -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <div class="contacts-container">
+            <div class="contact-block fade-in">
+                <h3>Контактная информация</h3>
+                <div class="contact-item">
+                    <strong> Телефон:</strong> 
+                    <div>
+                        <div>+375 29 538 41 74</div>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <strong> Email:</strong> 
+                    <div>
+                        <div>info@example.com</div>
+                       
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <strong>График работы:</strong> 
+                    <div>
+                        <div>
+                            <p>Работаем по предварительной записи все дни недели кроме воскресенья</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        
+    </footer>
+
+    <script>
+        // Плавная прокрутка для якорных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Анимация появления элементов при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Наблюдаем за элементами для анимации
+        document.querySelectorAll('.service-card, .about-content, .contact-block').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
